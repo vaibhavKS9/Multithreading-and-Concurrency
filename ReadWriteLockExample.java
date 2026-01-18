@@ -5,7 +5,7 @@ import java.util.*;
 
 public class ReadWriteLockExample {
 
-    private final ReadWriteLock lock=new ReentrantReadWriteLock(true);
+    private final ReadWriteLock lock=new ReentrantReadWriteLock(true);// if fair lock is not set true then reader starvation may occur as writers may keep acquiring lock due to default non fair nature and writers priority over readers
     private final Lock readLock=lock.readLock();
     private final Lock writeLock=lock.writeLock();
 
