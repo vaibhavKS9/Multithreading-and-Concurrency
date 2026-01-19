@@ -1,6 +1,6 @@
 import java.util.concurrent.Semaphore;
 
-class ReadersWriters {
+public class SemaphoreExample {
     private static final Semaphore rwMutex = new Semaphore(1); // controls access to the shared resource
     private static final Semaphore mutex = new Semaphore(1);   // protects readCount
     // readers unlimited access no cap
